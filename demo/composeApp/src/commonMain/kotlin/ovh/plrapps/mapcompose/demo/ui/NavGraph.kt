@@ -56,7 +56,7 @@ enum class MainDestinations() {
         override val screen = AnimationDemo
     },
     OSM_DEMO{
-        override val title = "Open Street Map demo"
+        override val title = "Map Tiler Demo"
         override val screen = OsmDemo
     },
     HTTP_TILES_DEMO{

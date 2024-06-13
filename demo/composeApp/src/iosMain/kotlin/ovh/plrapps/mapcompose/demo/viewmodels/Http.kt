@@ -27,7 +27,7 @@ actual fun makeOsmTileStreamProvider(): TileStreamProvider {
     val httpClient = getKtorClient()
     return TileStreamProvider { row, col, zoomLvl ->
         try {
-            getStream(httpClient, "https://tile.openstreetmap.org/$zoomLvl/$col/$row.png")
+            getStream(httpClient, "https://api.maptiler.com/maps/basic-v2/256/$zoomLvl/$col/$row.png?key=5wkAmd1UDQR5vMMVWhHG")
         } catch (e: Exception) {
             e.printStackTrace()
             null

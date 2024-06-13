@@ -30,7 +30,7 @@ actual fun makeHttpTileStreamProvider(): TileStreamProvider {
 actual fun makeOsmTileStreamProvider() : TileStreamProvider {
     return TileStreamProvider { row, col, zoomLvl ->
         try {
-            val url = URL("https://tile.openstreetmap.org/$zoomLvl/$col/$row.png")
+            val url = URL("https://api.maptiler.com/maps/basic-v2/256/$zoomLvl/$col/$row.png?key=5wkAmd1UDQR5vMMVWhHG")
             val connection = url.openConnection() as HttpURLConnection
             // OSM requires a user-agent
             connection.setRequestProperty("User-Agent", "Chrome/120.0.0.0 Safari/537.36")
